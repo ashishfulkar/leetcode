@@ -1,4 +1,4 @@
-package com.ashx.leetcode.google.medium;
+package com.ashx.leetcode.google.hard;
 
 public class SmallestRectangleEnclosingBlackPixels {
     public static void main(String[] args) {
