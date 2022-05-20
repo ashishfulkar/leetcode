@@ -1,4 +1,4 @@
-package com.ashx.leetcode.google.hard;
+package com.ashx.leetcode.google.medium;
 
 public class SentenceScreenFitting {
     public static void main(String[] args) {
