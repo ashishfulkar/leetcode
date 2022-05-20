@@ -47,8 +47,8 @@ public class RobotRoomCleaner {
 }
 
 /**
- * // This is the robot's control interface.
- * // You should not implement it, or speculate about its implementation
+ * This is the robot's control interface.
+ * You should not implement it, or speculate about its implementation
  */
 interface Robot {
     // Returns true if the cell in front is open and robot moves into the cell.
