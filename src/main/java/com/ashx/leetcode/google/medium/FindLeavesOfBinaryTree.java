@@ -1,5 +1,7 @@
 package com.ashx.leetcode.google.medium;
 
+import com.ashx.leetcode.google.model.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,25 +37,6 @@ public class FindLeavesOfBinaryTree {
             }
             res.get(ht).add(root.val);
             return ht;
-        }
-    }
-
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
         }
     }
 }
