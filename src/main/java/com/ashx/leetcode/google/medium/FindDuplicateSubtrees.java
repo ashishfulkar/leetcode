@@ -1,4 +1,6 @@
-package com.ashx.leetcode.google.model;
+package com.ashx.leetcode.google.medium;
+
+import com.ashx.leetcode.google.model.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Comparator;
