@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+/**
+ * <a href="https://leetcode.com/problems/meeting-rooms-ii/">Leetcode</a>
+ */
 public class MeetingRoomsII {
     public static void main(String[] args) {
         int[][] intervals = new int[][]{{0, 30}, {5, 10}, {15, 20}};

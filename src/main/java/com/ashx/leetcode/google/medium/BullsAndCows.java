@@ -1,5 +1,8 @@
 package com.ashx.leetcode.google.medium;
 
+/**
+ * <a href="https://leetcode.com/problems/bulls-and-cows/">Leetcode</a>
+ */
 public class BullsAndCows {
     public static void main(String[] args) {
         String secret = "1807", guess = "7810";

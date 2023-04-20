@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * https://leetcode.com/problems/minimum-time-difference/
+ * <a href="https://leetcode.com/problems/minimum-time-difference/">Leetcode</a>
  */
 public class MinimumTimeDifference {
     public static void main(String[] args) {

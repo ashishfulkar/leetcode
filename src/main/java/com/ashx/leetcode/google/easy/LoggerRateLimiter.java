@@ -3,6 +3,9 @@ package com.ashx.leetcode.google.easy;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * <a href="https://leetcode.com/problems/logger-rate-limiter/">Leetcode</a>
+ */
 public class LoggerRateLimiter {
     private final Map<String, Integer> logs;
 

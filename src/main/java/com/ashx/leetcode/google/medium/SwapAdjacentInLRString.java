@@ -1,7 +1,7 @@
 package com.ashx.leetcode.google.medium;
 
 /**
- * https://leetcode.com/problems/swap-adjacent-in-lr-string/
+ * <a href="https://leetcode.com/problems/swap-adjacent-in-lr-string/">Leetcode</a>
  */
 public class SwapAdjacentInLRString {
     public static void main(String[] args) {

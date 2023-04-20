@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * <a href="https://leetcode.com/problems/combination-sum-iii/">Leetcode</a>
+ */
 public class CombinationSumIII {
     public static void main(String[] args) {
         List<List<Integer>> r1 = combinationSum3(3, 7);

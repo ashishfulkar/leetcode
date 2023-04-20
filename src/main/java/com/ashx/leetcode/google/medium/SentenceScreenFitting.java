@@ -1,5 +1,8 @@
 package com.ashx.leetcode.google.medium;
 
+/**
+ * <a href="https://leetcode.com/problems/sentence-screen-fitting/">Leetcode</a>
+ */
 public class SentenceScreenFitting {
     public static void main(String[] args) {
 //        System.out.println(wordsTyping(new String[]{"hello", "world"}, 2, 8));

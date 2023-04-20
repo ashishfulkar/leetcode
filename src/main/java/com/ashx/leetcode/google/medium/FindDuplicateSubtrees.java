@@ -9,7 +9,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * https://leetcode.com/problems/find-duplicate-subtrees/
+ * <a href="https://leetcode.com/problems/find-duplicate-subtrees/">Leetcode</a>
  */
 public class FindDuplicateSubtrees {
     public static void main(String[] args) {

@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Map;
 
 /**
- * https://leetcode.com/problems/number-of-matching-subsequences/
+ * <a href="https://leetcode.com/problems/number-of-matching-subsequences/">Leetcode</a>
  */
 public class NumberOfMatchingSubsequences {
     public static void main(String[] args) {

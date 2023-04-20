@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * <a href="https://leetcode.com/problems/text-justification/">Leetcode</a>
+ */
 public class TextJustification {
     public static void main(String[] args) {
         String[] words = new String[]{"What", "must", "be", "acknowledgment", "shall", "be"};

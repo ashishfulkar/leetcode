@@ -1,7 +1,7 @@
 package com.ashx.leetcode.google.easy;
 
 /**
- * https://leetcode.com/problems/happy-number/
+ * <a href="https://leetcode.com/problems/happy-number/">Leetcode</a>
  */
 public class HappyNumber {
     public static void main(String[] args) {

@@ -3,6 +3,9 @@ package com.ashx.leetcode.google.medium;
 import java.util.Objects;
 import java.util.Stack;
 
+/**
+ * <a href="https://leetcode.com/problems/decode-string/">Leetcode</a>
+ */
 public class DecodeString {
     public static void main(String[] args) {
         System.out.println(decodeString("3[z]2[2[y]pq4[2[jk]e1[f]]]ef"));

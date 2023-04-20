@@ -1,5 +1,8 @@
 package com.ashx.leetcode.google.hard;
 
+/**
+ * <a href="https://leetcode.com/problems/smallest-rectangle-enclosing-black-pixels/">Leetcode</a>
+ */
 public class SmallestRectangleEnclosingBlackPixels {
     public static void main(String[] args) {
         char[][] image = new char[][]{

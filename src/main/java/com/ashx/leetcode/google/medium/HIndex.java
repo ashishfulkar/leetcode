@@ -2,6 +2,9 @@ package com.ashx.leetcode.google.medium;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.com/problems/h-index/">Leetcode</a>
+ */
 public class HIndex {
     public static void main(String[] args) {
         System.out.println(hIndex(new int[]{3, 0, 6, 1, 5}));
