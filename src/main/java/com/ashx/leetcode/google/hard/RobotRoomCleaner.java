@@ -37,8 +37,8 @@ public class RobotRoomCleaner {
         robot.turnRight();
         robot.turnRight();
         robot.move();
-        robot.turnRight();
-        robot.turnRight();
+        robot.turnLeft();
+        robot.turnLeft();
     }
 
     public void backtrack(int row, int col, int d) {
