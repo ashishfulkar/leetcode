@@ -2,35 +2,24 @@ package com.ashx.leetcode.google.medium;
 
 import com.ashx.leetcode.google.model.TreeNode;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * <a href="https://leetcode.com/problems/find-duplicate-subtrees/">Leetcode</a>
  */
 public class FindDuplicateSubtrees {
     public static void main(String[] args) {
+        FindDuplicateSubtrees s = new FindDuplicateSubtrees();
         TreeNode root = new TreeNode(2);
         root.left = new TreeNode(2);
         root.right = new TreeNode(2);
         root.left.left = new TreeNode(3);
         root.right.left = new TreeNode(3);
 
-        List<TreeNode> duplicates = findDuplicateSubtrees(root);
+        List<TreeNode> duplicates = s.findDuplicateSubtrees(root);
         for (TreeNode node : duplicates) {
             System.out.println(inorder(node));
         }
-    }
-
-    public static List<TreeNode> findDuplicateSubtrees(TreeNode root) {
-        Set<TreeNode> set = new TreeSet<>(new TreeNodeComparator());
-        Set<TreeNode> duplicates = new TreeSet<>(new TreeNodeComparator());
-        inorder(root, set, duplicates);
-
-        return new ArrayList<>(duplicates);
     }
 
     private static void inorder(TreeNode root, Set<TreeNode> set, Set<TreeNode> duplicates) {
@@ -41,6 +30,28 @@ public class FindDuplicateSubtrees {
             }
             inorder(root.right, set, duplicates);
         }
+    }
+
+    public static List<Integer> inorder(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        inorder(root, list);
+        return list;
+    }
+
+    private static void inorder(TreeNode root, List<Integer> list) {
+        if (root != null) {
+            inorder(root.left, list);
+            list.add(root.val);
+            inorder(root.right, list);
+        }
+    }
+
+    public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
+        Set<TreeNode> set = new TreeSet<>(new TreeNodeComparator());
+        Set<TreeNode> duplicates = new TreeSet<>(new TreeNodeComparator());
+        inorder(root, set, duplicates);
+
+        return new ArrayList<>(duplicates);
     }
 
     private static class TreeNodeComparator implements Comparator<TreeNode> {
@@ -62,20 +73,6 @@ public class FindDuplicateSubtrees {
                 }
                 return cmp;
             }
-        }
-    }
-
-    public static List<Integer> inorder(TreeNode root) {
-        List<Integer> list = new ArrayList<>();
-        inorder(root, list);
-        return list;
-    }
-
-    private static void inorder(TreeNode root, List<Integer> list) {
-        if (root != null) {
-            inorder(root.left, list);
-            list.add(root.val);
-            inorder(root.right, list);
         }
     }
 }

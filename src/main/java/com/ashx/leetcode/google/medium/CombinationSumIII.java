@@ -26,18 +26,6 @@ public class CombinationSumIII {
         return r;
     }
 
-    private static void print(List<List<Integer>> r) {
-        System.out.println("Solution:");
-        if (!r.isEmpty()) {
-            for (List<Integer> l : r) {
-                System.out.println(Arrays.toString(l.toArray()));
-            }
-        } else {
-            System.out.println("[]");
-        }
-        System.out.println();
-    }
-
     private static void backtrack(int start, int remain, int k, LinkedList<Integer> c, List<List<Integer>> r) {
         if (remain == 0 && c.size() == k) {
             // Note: it's important to make a deep copy here,
@@ -55,6 +43,18 @@ public class CombinationSumIII {
             backtrack(i + 1, remain - i, k, c, r);
             c.removeLast();
         }
+    }
+
+    private static void print(List<List<Integer>> r) {
+        System.out.println("Solution:");
+        if (!r.isEmpty()) {
+            for (List<Integer> l : r) {
+                System.out.println(Arrays.toString(l.toArray()));
+            }
+        } else {
+            System.out.println("[]");
+        }
+        System.out.println();
     }
 
 }

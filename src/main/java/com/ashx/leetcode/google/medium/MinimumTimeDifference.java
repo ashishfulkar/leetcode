@@ -10,8 +10,37 @@ import java.util.List;
  */
 public class MinimumTimeDifference {
     public static void main(String[] args) {
-//        System.out.println(findMinDifference(Arrays.asList("23:59", "00:00")));
-        System.out.println(findMinDifference(Arrays.asList("00:00","23:59","00:00")));
+        //        System.out.println(findMinDifference(Arrays.asList("23:59", "00:00")));
+        System.out.println(findMinDifferencePerf(Arrays.asList("00:00", "23:59", "00:00")));
+    }
+
+    public static int findMinDifferencePerf(List<String> timePoints) {
+        var minutes = new boolean[24 * 60 + 1];
+        int first = Integer.MAX_VALUE;
+        int last = Integer.MIN_VALUE;
+        for (var s : timePoints) {
+            int minute = 0;
+            minute += s.charAt(4) - '0';
+            minute += (s.charAt(3) - '0') * 10;
+            minute += (s.charAt(1) - '0') * 60;
+            minute += (s.charAt(0) - '0') * 600;
+            if (minutes[minute]) {
+                return 0;
+            }
+            minutes[minute] = true;
+            first = Math.min(first, minute);
+            last = Math.max(last, minute);
+        }
+        int ans = first + 24 * 60 - last;
+        int prev = first;
+        for (int i = first + 1; i <= last; i++) {
+            if (!minutes[i]) {
+                continue;
+            }
+            ans = Math.min(ans, i - prev);
+            prev = i;
+        }
+        return ans;
     }
 
     public static int findMinDifference(List<String> timePoints) {
