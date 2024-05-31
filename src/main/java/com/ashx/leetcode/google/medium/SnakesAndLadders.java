@@ -54,7 +54,9 @@ public class SnakesAndLadders {
                     int ind = (b[i] == -1) ? i : b[i];
                     if (map[ind] == 0) {
                         map[ind] = steps + 1;
-                        if (ind == n * n) return map[ind];
+                        if (ind == n * n) {
+                            return map[ind];
+                        }
                         temp.push(ind);
                     }
                 }
