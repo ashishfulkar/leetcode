@@ -36,6 +36,7 @@ public class DailyTemperatures {
 
         for (int i = 0; i < temperatures.length; i++) {
             while (!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]) {
+                // stack peek/pop always return lowest from stack as stack contain temperatures in ascending order
                 int idx = stack.pop();
                 result[idx] = i - idx;
             }
