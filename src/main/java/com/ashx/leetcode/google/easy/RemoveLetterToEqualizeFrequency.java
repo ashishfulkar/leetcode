@@ -7,10 +7,10 @@ import java.util.TreeMap;
  */
 public class RemoveLetterToEqualizeFrequency {
     public static void main(String[] args) {
-        System.out.println(String.valueOf(equalFrequency("abcc"))); // true
-        System.out.println(String.valueOf(equalFrequency("aazz"))); // false
-        System.out.println(String.valueOf(equalFrequency("bac"))); // true
-        System.out.println(String.valueOf(equalFrequency("aca"))); // true
+        System.out.println(equalFrequency("abcc")); // true
+        System.out.println(equalFrequency("aazz")); // false
+        System.out.println(equalFrequency("bac")); // true
+        System.out.println(equalFrequency("aca")); // true
     }
 
     private static boolean equalFrequency(String word) {

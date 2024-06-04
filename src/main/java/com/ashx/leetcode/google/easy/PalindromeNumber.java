@@ -5,12 +5,12 @@ package com.ashx.leetcode.google.easy;
  */
 public class PalindromeNumber {
     public static void main(String[] args) {
-        System.out.println(isPalindrome(1000030001));
-//        System.out.println(isPalindrome(-121));
-//        System.out.println(isPalindrome(10));
-//        System.out.println(isPalindrome(11));
-//        System.out.println(isPalindrome(1001));
-//        System.out.println(isPalindrome(9999));
+        System.out.println(isPalindrome(1000030001)); // false
+        System.out.println(isPalindrome(-121)); // false
+        System.out.println(isPalindrome(10)); // false
+        System.out.println(isPalindrome(11)); // true
+        System.out.println(isPalindrome(1001)); // true
+        System.out.println(isPalindrome(9999)); // true
     }
 
     public static boolean isPalindrome(int x) { // 123454321

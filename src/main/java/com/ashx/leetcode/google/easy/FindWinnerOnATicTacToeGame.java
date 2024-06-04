@@ -5,7 +5,7 @@ package com.ashx.leetcode.google.easy;
  */
 public class FindWinnerOnATicTacToeGame {
     public static void main(String[] args) {
-        int[][] moves = new int[][]{{0, 0}, {2, 0}, {1, 1}, {2, 1}, {2, 2}};
+        int[][] moves = new int[][]{{0, 0}, {2, 0}, {1, 1}, {2, 1}, {2, 2}}; // A
         String result = tictactoe(moves);
         System.out.println(result);
     }

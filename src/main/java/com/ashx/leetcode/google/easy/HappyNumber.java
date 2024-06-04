@@ -5,8 +5,8 @@ package com.ashx.leetcode.google.easy;
  */
 public class HappyNumber {
     public static void main(String[] args) {
-        System.out.println(isHappy(19));
-        System.out.println(isHappy(2));
+        System.out.println(isHappy(19)); // true
+        System.out.println(isHappy(2)); // false
     }
 
     private static int getNext(int n) {

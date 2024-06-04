@@ -7,7 +7,7 @@ import java.util.Map;
  * <a href="https://leetcode.com/problems/roman-to-integer/">Leetcode</a>
  */
 public class RomanToInteger {
-    public static final Map<Character, Integer> romanMap = new HashMap<Character, Integer>() {{
+    public static final Map<Character, Integer> romanMap = new HashMap<>() {{
         put('I', 1);
         put('V', 5);
         put('X', 10);
@@ -18,9 +18,8 @@ public class RomanToInteger {
     }};
 
     public static void main(String[] args) {
-        System.out.println(romanToInt("III"));
-        System.out.println(romanToInt("LVIII"));
-        System.out.println(romanToInt("LVIII"));
+        System.out.println(romanToInt("III")); // 3
+        System.out.println(romanToInt("LVIII")); // 58
     }
 
     public static int romanToInt(String s) {
@@ -30,9 +29,7 @@ public class RomanToInteger {
             boolean digAdded = false;
             if (i + 1 < s.length()) {
                 char c2 = s.charAt(i + 1);
-                if ((c1 == 'I' && (c2 == 'V' || c2 == 'X'))
-                        || (c1 == 'X' && (c2 == 'L' || c2 == 'C'))
-                        || (c1 == 'C' && (c2 == 'D' || c2 == 'M'))) {
+                if ((c1 == 'I' && (c2 == 'V' || c2 == 'X')) || (c1 == 'X' && (c2 == 'L' || c2 == 'C')) || (c1 == 'C' && (c2 == 'D' || c2 == 'M'))) {
                     res += romanMap.get(c2) - romanMap.get(c1);
                     i++;
                     digAdded = true;
