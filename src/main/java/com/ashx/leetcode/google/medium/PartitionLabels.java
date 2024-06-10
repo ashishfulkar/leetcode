@@ -26,7 +26,7 @@ public class PartitionLabels {
         for (char c : chars) {
             arr[c]++;
         }
-        int left = 0, right = 0, lastLeft = 0;
+        int left = 0, right = 0, prevLeft = 0;
         while (right < len) {
             int cnt = arr[chars[left]];
             while (cnt > 0 && right < len) {
@@ -41,8 +41,8 @@ public class PartitionLabels {
                 left++;
             }
             if (left == right) {
-                partitions.add(left - lastLeft);
-                lastLeft = left;
+                partitions.add(left - prevLeft);
+                prevLeft = left;
             }
         }
 

@@ -6,7 +6,7 @@ package com.ashx.leetcode.google.medium;
 public class BullsAndCows {
     public static void main(String[] args) {
         String secret = "1807", guess = "7810";
-        System.out.println(getHint(secret, guess));
+        System.out.println(getHint(secret, guess)); // 1A3B
     }
 
     public static String getHint(String secret, String guess) {

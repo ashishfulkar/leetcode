@@ -32,8 +32,8 @@ public class CoinChange {
         }
 
         int minCoins = Integer.MAX_VALUE;
-        for (int i = 0; i < coins.length; i++) {
-            int ans = coinCount(coins, amount - coins[i], dp);
+        for (int coin : coins) {
+            int ans = coinCount(coins, amount - coin, dp);
 
             if (ans != Integer.MAX_VALUE) {
                 // we have returned 0 in ans, so now we are updating the ans count

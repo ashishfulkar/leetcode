@@ -6,9 +6,8 @@ package com.ashx.leetcode.google.medium;
 public class ContainerWithMostWater {
     public static void main(String[] args) {
         ContainerWithMostWater w = new ContainerWithMostWater();
-        int[] height = {1, 8, 6, 2, 5, 4, 8, 3, 7}; // 49
-        // int[] height = {1, 1}; // 1
-        System.out.println(w.maxArea(height));
+        System.out.println(w.maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7})); // 49
+        System.out.println(w.maxArea(new int[]{1, 1})); // 1
     }
 
     public int maxArea(int[] height) {
@@ -17,10 +16,7 @@ public class ContainerWithMostWater {
         int start = 0, end = n - 1;
         while (start < end) {
             int min = Math.min(height[start], height[end]);
-            int water = min * (end - start);
-            if (water > max) {
-                max = water;
-            }
+            max = Math.max(max, min * (end - start));
             while (height[start] <= min && start < end) {
                 start++;
             }

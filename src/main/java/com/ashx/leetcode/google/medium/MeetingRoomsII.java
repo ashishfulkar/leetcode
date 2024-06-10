@@ -10,7 +10,7 @@ import java.util.PriorityQueue;
 public class MeetingRoomsII {
     public static void main(String[] args) {
         int[][] intervals = new int[][]{{0, 30}, {5, 10}, {15, 20}};
-        System.out.println(minMeetingRooms(intervals));
+        System.out.println(minMeetingRooms(intervals)); // 2
     }
 
     public static int minMeetingRooms(int[][] intervals) {
@@ -19,8 +19,7 @@ public class MeetingRoomsII {
         }
 
         Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
-        PriorityQueue<Integer> q = new PriorityQueue<>(
-                intervals.length, Comparator.comparingInt(a -> a));
+        PriorityQueue<Integer> q = new PriorityQueue<>(intervals.length, Comparator.comparingInt(a -> a));
         q.add(intervals[0][1]);
         for (int i = 1; i < intervals.length; i++) {
             if (intervals[i][0] >= q.peek()) {

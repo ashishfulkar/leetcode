@@ -7,9 +7,11 @@ import java.util.Stack;
  * <a href="https://leetcode.com/problems/decode-string/">Leetcode</a>
  */
 public class DecodeString {
+    private static int index = 0;
+
     public static void main(String[] args) {
-        System.out.println(decodeString("3[z]2[2[y]pq4[2[jk]e1[f]]]ef"));
-        System.out.println(decodeStringRec("3[z]2[2[y]pq4[2[jk]e1[f]]]ef"));
+        System.out.println(decodeString("3[z]2[2[y]pq4[2[jk]e1[f]]]ef")); // zzzyypqjkjkefjkjkefjkjkefjkjkefyypqjkjkefjkjkefjkjkefjkjkefef
+        System.out.println(decodeStringRec("3[z]2[2[y]pq4[2[jk]e1[f]]]ef")); // zzzyypqjkjkefjkjkefjkjkefjkjkefyypqjkjkefjkjkefjkjkefjkjkefef
     }
 
     public static String myFailedSolution(String s) {
@@ -61,19 +63,6 @@ public class DecodeString {
         return res.toString();
     }
 
-    static class Pair {
-        String str;
-        int rep;
-
-        public static Pair of(String str, int rep) {
-            Pair pair = new Pair();
-            pair.str = str;
-            pair.rep = rep;
-            return pair;
-        }
-    }
-
-
     public static String decodeString(String s) {
         Stack<Integer> countStack = new Stack<>();
         Stack<StringBuilder> stringStack = new Stack<>();
@@ -104,8 +93,6 @@ public class DecodeString {
         return currentString.toString();
     }
 
-    private static int index = 0;
-
     public static String decodeStringRec(String s) {
         StringBuilder result = new StringBuilder();
         while (index < s.length() && s.charAt(index) != ']') {
@@ -129,5 +116,17 @@ public class DecodeString {
             }
         }
         return new String(result);
+    }
+
+    static class Pair {
+        String str;
+        int rep;
+
+        public static Pair of(String str, int rep) {
+            Pair pair = new Pair();
+            pair.str = str;
+            pair.rep = rep;
+            return pair;
+        }
     }
 }

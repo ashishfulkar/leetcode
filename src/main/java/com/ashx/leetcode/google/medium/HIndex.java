@@ -7,10 +7,10 @@ import java.util.Arrays;
  */
 public class HIndex {
     public static void main(String[] args) {
-        System.out.println(hIndex(new int[]{3, 0, 6, 1, 5}));
-        System.out.println(hIndex(new int[]{1, 3, 1}));
-        System.out.println(hIndex(new int[]{100}));
-        System.out.println(hIndex(new int[]{11, 15}));
+        System.out.println(hIndex(new int[]{3, 0, 6, 1, 5})); // 3
+        System.out.println(hIndex(new int[]{1, 3, 1})); // 1
+        System.out.println(hIndex(new int[]{100})); // 1
+        System.out.println(hIndex(new int[]{11, 15})); // 2
     }
 
     public static int hIndex(int[] citations) {

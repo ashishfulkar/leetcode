@@ -6,10 +6,10 @@ package com.ashx.leetcode.google.medium;
 public class ShortestWayToFormString {
     public static void main(String[] args) {
         ShortestWayToFormString s = new ShortestWayToFormString();
-        // System.out.println(s.shortestWay("abc", "abcbc"));
-        // System.out.println(s.shortestWay("abc", "acdbc"));
-        // System.out.println(s.shortestWay("xyz", "xzyxz"));
-        System.out.println(s.shortestWay("aaaaa", "aaaaaaaaaaaaa"));
+        // System.out.println(s.shortestWay("abc", "abcbc")); // 2
+        // System.out.println(s.shortestWay("abc", "acdbc")); // -1
+        // System.out.println(s.shortestWay("xyz", "xzyxz")); // 3
+        System.out.println(s.shortestWay("aaaaa", "aaaaaaaaaaaaa")); // 3
     }
 
     public int shortestWay(String source, String target) {

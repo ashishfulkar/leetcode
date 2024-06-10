@@ -10,11 +10,11 @@ import java.util.List;
  */
 public class CombinationSumIII {
     public static void main(String[] args) {
-        List<List<Integer>> r1 = combinationSum3(3, 7);
+        List<List<Integer>> r1 = combinationSum3(3, 7); // [1, 2, 4]
         print(r1);
-        List<List<Integer>> r2 = combinationSum3(3, 9);
+        List<List<Integer>> r2 = combinationSum3(3, 9); // [1, 2, 6], [1, 3, 5], [2, 3, 4]
         print(r2);
-        List<List<Integer>> r3 = combinationSum3(4, 1);
+        List<List<Integer>> r3 = combinationSum3(4, 1); // []
         print(r3);
     }
 

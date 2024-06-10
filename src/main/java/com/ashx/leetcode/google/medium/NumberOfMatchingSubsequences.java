@@ -13,7 +13,7 @@ public class NumberOfMatchingSubsequences {
         System.out.println(numMatchingSubseq("abcde", new String[]{"a", "bb", "acd", "ace"}));
     }
 
-    public static int numMatchingSubseq(String S, String[] words) {
+    public static int numMatchingSubseq(String s, String[] words) {
         Map<Character, Deque<String>> map = new HashMap<>();
         for (char c = 'a'; c <= 'z'; c++) {
             map.putIfAbsent(c, new LinkedList<>());
@@ -23,7 +23,7 @@ public class NumberOfMatchingSubsequences {
         }
 
         int count = 0;
-        for (char c : S.toCharArray()) {
+        for (char c : s.toCharArray()) {
             Deque<String> queue = map.get(c);
             int size = queue.size();
             for (int i = 0; i < size; i++) {

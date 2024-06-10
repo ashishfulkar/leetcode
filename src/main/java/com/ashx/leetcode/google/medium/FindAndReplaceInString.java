@@ -10,7 +10,9 @@ import java.util.List;
 public class FindAndReplaceInString {
     public static void main(String[] args) {
         FindAndReplaceInString s = new FindAndReplaceInString();
-        System.out.println(s.findReplaceString("vmokgggqzp", new int[]{3, 5, 1}, new String[]{"kg", "ggq", "mo"}, new String[]{"s", "so", "bfr"}));
+        System.out.println(s.findReplaceString("vmokgggqzp", new int[]{3, 5, 1}, new String[]{"kg", "ggq", "mo"}, new String[]{"s", "so", "bfr"})); // vbfrssozp
+        System.out.println(s.findReplaceString("abcd", new int[]{0, 2}, new String[]{"a", "cd"}, new String[]{"eee", "ffff"})); // eeebffff
+        System.out.println(s.findReplaceString("abcd", new int[]{0, 2}, new String[]{"ab", "ec"}, new String[]{"eee", "ffff"})); // eeecd
     }
 
     public String findReplaceString(String s, int[] indices, String[] sources, String[] targets) {
@@ -20,10 +22,10 @@ public class FindAndReplaceInString {
         }
         sorted.sort(Comparator.comparing(i -> -i[0]));
         for (int[] ind : sorted) {
-            int i = ind[0], j = ind[1];
-            String src = sources[j], target = targets[j];
-            if (s.startsWith(src, i)) {
-                s = s.substring(0, i) + target + s.substring(i + src.length());
+            int srcIdx = ind[0], arrIdx = ind[1];
+            String src = sources[arrIdx], target = targets[arrIdx];
+            if (s.startsWith(src, srcIdx)) {
+                s = s.substring(0, srcIdx) + target + s.substring(srcIdx + src.length());
             }
         }
         return s;

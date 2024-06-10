@@ -6,8 +6,9 @@ package com.ashx.leetcode.google.medium;
 public class TrappingRainWater {
     public static void main(String[] args) {
         TrappingRainWater t = new TrappingRainWater();
-        int[] arr = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
-        System.out.println(t.findWater(arr));
+        System.out.println(t.findWater(new int[]{2, 0, 2})); // 2
+        System.out.println(t.findWater(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1})); // 6
+        System.out.println(t.findWater(new int[]{3, 0, 2, 0, 4})); // 7
     }
 
     public int findWater(int[] arr) {

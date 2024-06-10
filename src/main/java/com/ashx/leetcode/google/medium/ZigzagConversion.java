@@ -41,8 +41,7 @@ public class ZigzagConversion {
                 i += 2;
             }
 
-            String zigzagString = new String(zigzagCharArr);
-            return zigzagString;
+            return new String(zigzagCharArr);
         } else if (numRows >= 3) {
             int i = 0, x = 0, k = 0;
 
@@ -79,14 +78,13 @@ public class ZigzagConversion {
 
             // get last row characters from (virtual) zigzag
             i = numRows - 1;
-            leap = (numRows - 1 - 0) * 2;
+            leap = (numRows - 1) * 2;
             while (i < len) {
                 zigzagCharArr[x++] = chArr[i];
                 i += leap;
             }
 
-            String zigzagString = new String(zigzagCharArr);
-            return zigzagString;
+            return new String(zigzagCharArr);
         }
         return s;
     }

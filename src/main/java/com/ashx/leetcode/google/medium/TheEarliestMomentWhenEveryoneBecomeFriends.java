@@ -11,13 +11,9 @@ import java.util.PriorityQueue;
 public class TheEarliestMomentWhenEveryoneBecomeFriends {
     public static void main(String[] args) {
         TheEarliestMomentWhenEveryoneBecomeFriends f = new TheEarliestMomentWhenEveryoneBecomeFriends();
-        // int[][] logs = {{20190101, 0, 1}, {20190104, 3, 4}, {20190107, 2, 3}, {20190211, 1, 5}, {20190224, 2, 4}, {20190301, 0, 3}, {20190312, 1, 2}, {20190322, 4, 5}};
-        // int n = 6;
-        // int[][] logs = {{0, 2, 0}, {1, 0, 1}, {3, 0, 3}, {4, 1, 2}, {7, 3, 1}};
-        // int n = 4;
-        int[][] logs = {{5, 3, 2}, {3, 0, 1}, {2, 2, 0}, {10, 2, 4}, {0, 3, 1}, {8, 3, 4}};
-        int n = 5;
-        System.out.println(f.earliestAcqPerf(logs, n));
+        System.out.println(f.earliestAcqPerf(new int[][]{{20190101, 0, 1}, {20190104, 3, 4}, {20190107, 2, 3}, {20190211, 1, 5}, {20190224, 2, 4}, {20190301, 0, 3}, {20190312, 1, 2}, {20190322, 4, 5}}, 6)); // 20190301
+        System.out.println(f.earliestAcqPerf(new int[][]{{0, 2, 0}, {1, 0, 1}, {3, 0, 3}, {4, 1, 2}, {7, 3, 1}}, 4)); // 3
+        System.out.println(f.earliestAcqPerf(new int[][]{{5, 3, 2}, {3, 0, 1}, {2, 2, 0}, {10, 2, 4}, {0, 3, 1}, {8, 3, 4}}, 5)); // 8
     }
 
     public int earliestAcq(int[][] logs, int n) {

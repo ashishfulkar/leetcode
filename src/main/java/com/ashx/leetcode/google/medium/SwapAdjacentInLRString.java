@@ -5,7 +5,7 @@ package com.ashx.leetcode.google.medium;
  */
 public class SwapAdjacentInLRString {
     public static void main(String[] args) {
-        System.out.println(canTransform("RXXLRXRXL", "XRLXXRRLX"));
+        System.out.println(canTransform("RXXLRXRXL", "XRLXXRRLX")); // true
     }
 
     public static boolean canTransform(String start, String end) {
@@ -26,7 +26,7 @@ public class SwapAdjacentInLRString {
                 p2++;
             }
 
-            //if both of the pointers reach the end the strings are transformable
+            // if both of the pointers reach the end the strings are transformable
             if (p1 == start.length() && p2 == end.length()) {
                 return true;
             }

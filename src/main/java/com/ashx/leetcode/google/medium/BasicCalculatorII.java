@@ -16,34 +16,34 @@ public class BasicCalculatorII {
     }
 
     public int calculatePerf(String s) {
-        int p = 0, num = 0, sum = 0;
-        char o = '+';
+        int prevNum = 0, currNum = 0, sum = 0;
+        char prevOp = '+';
         for (char c : s.toCharArray()) {
             if (c >= '0' && c <= '9') {
-                num *= 10;
-                num += c - '0';
+                currNum *= 10;
+                currNum += c - '0';
             } else if (c != ' ') {
-                if (o == '+') {
-                    sum += p;
-                    p = num;
-                } else if (o == '-') {
-                    sum += p;
-                    p = -num;
-                } else if (o == '*') {
-                    p *= num;
-                } else if (o == '/') {
-                    p /= num;
+                if (prevOp == '+') {
+                    sum += prevNum;
+                    prevNum = currNum;
+                } else if (prevOp == '-') {
+                    sum += prevNum;
+                    prevNum = -currNum;
+                } else if (prevOp == '*') {
+                    prevNum *= currNum;
+                } else if (prevOp == '/') {
+                    prevNum /= currNum;
                 }
-                num = 0;
-                o = c;
+                currNum = 0;
+                prevOp = c;
             }
         }
 
-        return switch (o) {
-            case '+' -> sum + p + num;
-            case '-' -> sum + p - num;
-            case '*' -> sum + p * num;
-            default -> sum + p / num;
+        return switch (prevOp) {
+            case '+' -> sum + prevNum + currNum;
+            case '-' -> sum + prevNum - currNum;
+            case '*' -> sum + prevNum * currNum;
+            default -> sum + prevNum / currNum;
         };
     }
 

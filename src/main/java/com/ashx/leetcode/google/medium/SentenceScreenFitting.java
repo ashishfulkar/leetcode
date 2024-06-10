@@ -5,10 +5,10 @@ package com.ashx.leetcode.google.medium;
  */
 public class SentenceScreenFitting {
     public static void main(String[] args) {
-//        System.out.println(wordsTyping(new String[]{"hello", "world"}, 2, 8));
-//        System.out.println(wordsTyping(new String[]{"a", "bcd", "e"}, 3, 6));
-//        System.out.println(wordsTyping(new String[]{"i","had","apple","pie"}, 4, 5));
-        System.out.println(wordsTyping(new String[]{"a", "bcd"}, 20000, 20000));
+        // System.out.println(wordsTyping(new String[]{"hello", "world"}, 2, 8)); // 1
+        // System.out.println(wordsTyping(new String[]{"a", "bcd", "e"}, 3, 6)); // 2
+        // System.out.println(wordsTyping(new String[]{"i", "had", "apple", "pie"}, 4, 5)); // 1
+        System.out.println(wordsTyping(new String[]{"a", "bcd"}, 20000, 20000)); // 66660000
     }
 
     public static int wordsTypingWorst(String[] sentence, int rows, int cols) {
@@ -44,7 +44,7 @@ public class SentenceScreenFitting {
             if (s.charAt(start % l) == ' ') {
                 start++;
             } else {
-                while (start > 0 && s.charAt((start-1) % l) != ' ') {
+                while (start > 0 && s.charAt((start - 1) % l) != ' ') {
                     start--;
                 }
             }
