@@ -8,11 +8,10 @@ import java.util.Arrays;
 public class NextGreaterElement {
     public static void main(String[] args) {
         NextGreaterElement e = new NextGreaterElement();
-        // int[] A = {3, 2, 1, 4, 5}; // 4 4 4 5 -1
-        // int[] A = {1, 5, 2, 3, 5}; // 5 -1 3 5 -1
-        // int[] A = {1, 2, 3, 4}; // 2 3 4 -1
-        int[] A = {4, 3, 2, 1}; // -1 -1 -1 -1
-        System.out.println(Arrays.toString(e.getNextGreaterElement(A)));
+        System.out.println(Arrays.toString(e.getNextGreaterElement(new int[]{3, 2, 1, 4, 5}))); // 4 4 4 5 -1
+        System.out.println(Arrays.toString(e.getNextGreaterElement(new int[]{1, 5, 2, 3, 5}))); // 5 -1 3 5 -1
+        System.out.println(Arrays.toString(e.getNextGreaterElement(new int[]{1, 2, 3, 4}))); // 2 3 4 -1
+        System.out.println(Arrays.toString(e.getNextGreaterElement(new int[]{4, 3, 2, 1}))); // -1 -1 -1 -1
     }
 
     int[] getNextGreaterElement(int[] A) {

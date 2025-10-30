@@ -13,17 +13,17 @@ public class NextPermutation {
         nums = new int[]{1, 2, 3};
         System.out.print(Arrays.toString(nums));
         p.nextPermutation(nums);
-        System.out.println("->" + Arrays.toString(nums));
+        System.out.println("->" + Arrays.toString(nums)); // [1, 2, 3]->[1, 3, 2]
 
         nums = new int[]{3, 2, 1};
         System.out.print(Arrays.toString(nums));
         p.nextPermutation(nums);
-        System.out.println("->" + Arrays.toString(nums));
+        System.out.println("->" + Arrays.toString(nums)); // [3, 2, 1]->[1, 2, 3]
 
         nums = new int[]{1, 1, 5};
         System.out.print(Arrays.toString(nums));
         p.nextPermutation(nums);
-        System.out.println("->" + Arrays.toString(nums));
+        System.out.println("->" + Arrays.toString(nums)); // [1, 1, 5]->[1, 5, 1]
     }
 
     public void nextPermutation(int[] nums) {

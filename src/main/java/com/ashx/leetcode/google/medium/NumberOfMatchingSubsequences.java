@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class NumberOfMatchingSubsequences {
     public static void main(String[] args) {
-        System.out.println(numMatchingSubseq("abcde", new String[]{"a", "bb", "acd", "ace"}));
+        System.out.println(numMatchingSubseq("abcde", new String[]{"a", "bb", "acd", "ace"})); // 3
     }
 
     public static int numMatchingSubseq(String s, String[] words) {
