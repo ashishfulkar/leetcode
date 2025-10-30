@@ -1,5 +1,7 @@
 package com.ashx.leetcode.google.easy;
 
+import com.ashx.leetcode.google.model.ListNode;
+
 public class ReverseLinkedList {
     public static void main(String[] args) {
 
@@ -36,22 +38,5 @@ public class ReverseLinkedList {
         curr.next = node;
 
         return next;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
     }
 }
