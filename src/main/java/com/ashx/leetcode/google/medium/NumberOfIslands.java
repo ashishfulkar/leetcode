@@ -1,5 +1,8 @@
 package com.ashx.leetcode.google.medium;
 
+/**
+ * <a href="https://leetcode.com/problems/number-of-islands/">Leetcode</a>
+ */
 public class NumberOfIslands {
     public static void main(String[] args) {
         NumberOfIslands i = new NumberOfIslands();
